@@ -3,17 +3,14 @@
 for (let i = 0; i<= document.querySelectorAll(".drum").length - 1;i++){
 
     
-    // Detecting button presses
 
     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
         let buttonInnerHTML = this.innerHTML;
-        playSound(buttonInnerHTML);
+        playSound(buttonInnerHTML)
     });
-    
-    // Detecting keypresses
 
-    document.addEventListener("keydown", function (){
-        playSound(event.key);
+    document.addEventListener("keydown", function (e){
+        playSound(e.key)
     });
 
     function playSound(key){
